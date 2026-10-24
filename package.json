@@ -1,0 +1,48 @@
+{
+  "name": "ai-agent-board",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Kanban board with policy-based routing for public text tasks and coding agents.",
+  "license": "MIT",
+  "author": "AI Router Board contributors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/66Hamidreza/ai-router-board.git"
+  },
+  "workspaces": [
+    "packages/client",
+    "packages/server",
+    "packages/e2e",
+    "shared"
+  ],
+  "scripts": {
+    "dev": "npm run build:shared && npx concurrently -n server,client -c blue,green \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:client": "npm run dev -w @ai-agent-board/client",
+    "dev:server": "npm run dev -w @ai-agent-board/server",
+    "build:shared": "npm run build -w @ai-agent-board/shared",
+    "build:client": "npm run build -w @ai-agent-board/client",
+    "build:server": "npm run build -w @ai-agent-board/server",
+    "test": "npm run test:e2e:required",
+    "test:e2e": "npm run test:e2e:required",
+    "test:e2e:required": "npm run test:required -w @ai-agent-board/e2e",
+    "gate:required": "node scripts/run-contract-tests.cjs && node scripts/run-required-gate.cjs",
+    "hooks:install": "node scripts/install-hooks.cjs"
+  },
+  "keywords": [
+    "ai",
+    "kanban",
+    "agents",
+    "routing",
+    "codex",
+    "claude",
+    "privacy"
+  ],
+  "homepage": "https://github.com/66Hamidreza/ai-router-board",
+  "bugs": {
+    "url": "https://github.com/66Hamidreza/ai-router-board/issues"
+  },
+  "engines": {
+    "node": ">=22",
+    "npm": ">=10"
+  }
+}

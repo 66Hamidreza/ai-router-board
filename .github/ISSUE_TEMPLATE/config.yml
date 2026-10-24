@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "Security report / گزارش امنیتی"
+    url: https://github.com/66Hamidreza/ai-router-board/security/advisories/new
+    about: "Report vulnerabilities privately; no secrets in issues. / آسیب‌پذیری را خصوصی گزارش کنید؛ کلید را در مسئله ننویسید."
