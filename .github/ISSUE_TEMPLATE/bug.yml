@@ -1,0 +1,42 @@
+name: "Bug report / گزارش خطا"
+description: "Report a reproducible problem / گزارش مشکل قابل بازتولید"
+title: "[Bug / خطا]: "
+body:
+  - type: markdown
+    attributes:
+      value: "Use this form for public, sanitized information only. Report vulnerabilities privately through Security advisories. / فقط اطلاعات عمومی و پاک‌سازی‌شده را بنویسید؛ آسیب‌پذیری را خصوصی گزارش کنید."
+  - type: textarea
+    id: summary
+    attributes:
+      label: "Problem / مشکل"
+      description: "Describe expected and actual behavior; use synthetic data. / رفتار مورد انتظار و واقعی را با دادهٔ ساختگی شرح دهید."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Reproduction / بازتولید"
+      description: "List exact steps and a minimal example. / مراحل دقیق و نمونهٔ کوچک را بنویسید."
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: "Environment / محیط"
+      description: "OS, Node version, app version, agent/provider, database, and Docker or local install. / سیستم‌عامل، نسخه‌ها، عامل، پایگاه داده و روش نصب."
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Sanitized logs / گزارش پاک‌سازی‌شده"
+      description: "Remove keys, paths identifying people, prompts, and private repository content. / کلید، مسیر شخصی و محتوای خصوصی را حذف کنید."
+    validations:
+      required: false
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: "Public report / گزارش عمومی"
+      options:
+        - label: "I removed secrets and private data. / کلیدها و دادهٔ خصوصی را حذف کرده‌ام."
+          required: true

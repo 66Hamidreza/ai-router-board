@@ -1,0 +1,35 @@
+name: "Feature request / پیشنهاد قابلیت"
+description: "Propose an improvement / پیشنهاد بهبود"
+title: "[Feature / قابلیت]: "
+body:
+  - type: markdown
+    attributes:
+      value: "Use this form for public, sanitized information only. Report vulnerabilities privately through Security advisories. / فقط اطلاعات عمومی و پاک‌سازی‌شده را بنویسید؛ آسیب‌پذیری را خصوصی گزارش کنید."
+  - type: textarea
+    id: problem
+    attributes:
+      label: "Use case / کاربرد"
+      description: "What problem are you trying to solve? / چه مسئله‌ای را می‌خواهید حل کنید؟"
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: "Proposal / پیشنهاد"
+      description: "Describe the behavior and any routing/confidentiality implications. / رفتار پیشنهادی و اثر آن بر مسیریابی و محرمانگی."
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "Alternatives / جایگزین‌ها"
+      description: "Describe alternatives and tradeoffs. / گزینه‌های دیگر و پیامدها را شرح دهید."
+    validations:
+      required: false
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: "Public report / گزارش عمومی"
+      options:
+        - label: "I removed secrets and private data. / کلیدها و دادهٔ خصوصی را حذف کرده‌ام."
+          required: true
