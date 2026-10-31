@@ -75,7 +75,7 @@ jobs:
           tags: |
             type=raw,value=${{ steps.release.outputs.version }}
             type=raw,value=latest,enable=${{ steps.release.outputs.prerelease == 'false' }}
-      - uses: docker/build-push-action@v6
+      - uses: docker/build-push-action@v7
         with:
           context: .
           platforms: linux/amd64,linux/arm64
